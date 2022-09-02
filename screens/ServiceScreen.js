@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import NavComponent from "../components/NavBar";
 import equipment from "../assets/XrayMachine.jpg";
 import "./ServiceScreen.css";
 import Partners from "../components/Partners";
+import TabComponent from "../components/TabComponent";
 
 const ServiceScreen = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const showModalHandler = () => {
+    setShowModal(!showModal);
+  };
+
+  const hideModalHandler = () => {
+    setShowModal(false);
+  };
   return (
     <>
       <style type="text/css">
@@ -47,9 +57,11 @@ const ServiceScreen = () => {
         src={equipment}
         alt=""
       />
+      {showModal && <TabComponent onClick={hideModalHandler} />}
       <Button
         variant="flat"
         size="lg"
+        onClick={showModalHandler}
         style={{
           position: "absolute",
           top: "50%",

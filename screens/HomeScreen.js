@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import NavComponent from "../components/NavBar";
 import hero from "../assets/XrayCar.jpg";
 import { Button } from "react-bootstrap";
 import "./HomeScreen.css";
 import Announcements from "../components/Announcements";
 import Partners from "../components/Partners";
+import TabComponent from "../components/TabComponent";
 
 const HomeScreen = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const showModalHandler = () => {
+    setShowModal(!showModal);
+  };
+
+  const hideModalHandler = () => {
+    setShowModal(false);
+  };
+
   return (
     <>
       <style type="text/css">
@@ -26,7 +37,13 @@ const HomeScreen = () => {
         At Specialty Portable X-Ray, Inc We Travel, Not The Patient!
       </h1>
       <img className="hero-image" src={hero} alt="" />
-      <Button className="btn-service" variant="flat" size="lg" style={{}}>
+      {showModal && <TabComponent onClick={hideModalHandler} />}
+      <Button
+        className="btn-service"
+        variant="flat"
+        size="lg"
+        onClick={showModalHandler}
+      >
         Order Exam
       </Button>
       <h1 className="heading-secondary">
@@ -42,13 +59,6 @@ const HomeScreen = () => {
       </p>
       <Announcements />
       <Partners />
-      <footer style={{ backgroundColor: "#000", height: "30rem" }}>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Necessitatibus doloremque maiores eos alias expedita fugiat in quos,
-          dolore explicabo maxime.
-        </p>
-      </footer>
     </>
   );
 };
