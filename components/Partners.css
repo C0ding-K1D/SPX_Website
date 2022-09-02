@@ -1,0 +1,34 @@
+.partner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+    ;
+}
+
+.partner-heading {
+    text-align: center;
+    /* text-transform: uppercase; */
+    color: #172a51f1;
+    font-weight: 700;
+    margin-top: 3rem;
+}
+
+.partner-subheading {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.apda-image {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    margin-bottom: 2rem;
+    ;
+}
+
+.logos {
+    width: 15%;
+}

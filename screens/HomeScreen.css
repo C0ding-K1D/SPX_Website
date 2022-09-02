@@ -1,0 +1,39 @@
+.heading-primary {
+    margin-top: 5rem;
+    position: relative;
+    z-index: 100;
+    text-align: center;
+    font-family: Oswald;
+    font-weight: 700;
+    color: #172a51f1
+}
+
+.heading-secondary {
+    /* margin-top: 5rem; */
+    position: relative;
+    z-index: 201;
+    text-align: center;
+    font-family: Oswald;
+    font-weight: 400;
+    color: #172a51f1;
+}
+
+.paragraph {
+    padding: 5rem;
+    font-size: 1.5rem;
+}
+
+.hero-image {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -10rem;
+}
+
+.btn-service {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 200;
+}

@@ -1,0 +1,30 @@
+.main-text {
+    color: #172a51f1;
+    margin-top: 3rem;
+    padding: 0 5rem;
+    font-size: 1.6rem;
+    font-family: Oswald;
+    font-weight: 700;
+    line-height: 2.2rem;
+    text-align: center;
+}
+
+.service-subtext {
+    color: #172a51f1;
+    text-align: center;
+    font-size: 1.4rem;
+    ;
+}
+
+.services-list {
+    text-align: center;
+    list-style: none;
+    margin-top: 5rem;
+}
+
+.services-list li {
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
