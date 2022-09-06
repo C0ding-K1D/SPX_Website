@@ -1,0 +1,25 @@
+.media-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.media-heading {
+    color: #172a51f1;
+
+}
+
+.interview-img {
+    margin-top: -3rem;
+    margin-bottom: -3rem;
+}
+
+.video-text {
+    font-size: 1.6rem;
+    font-weight: 200;
+}
+
+.tv-icon {
+    max-width: 80%;
+}

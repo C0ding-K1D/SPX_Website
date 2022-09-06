@@ -2,7 +2,9 @@ import React from "react";
 import { Tabs, Tab, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import ContactForm from "./ContactForm";
+import IncallForm from "./IncallForm";
 import Modal from "./Modal";
+import OutcallForm from "./OutcallForm";
 import "./TabComponent.css";
 
 const TabComponent = (props) => {
@@ -33,7 +35,7 @@ const TabComponent = (props) => {
             paddingTop: "1rem",
           }}
         >
-          <ContactForm />
+          <IncallForm />
         </TabPanel>
         <TabPanel
           style={{
@@ -41,7 +43,7 @@ const TabComponent = (props) => {
             paddingTop: "1rem",
           }}
         >
-          <ContactForm />
+          <OutcallForm />
         </TabPanel>
       </Tabs>
     </Modal>

@@ -36,16 +36,18 @@ const HomeScreen = () => {
       <h1 className="heading-primary">
         At Specialty Portable X-Ray, Inc We Travel, Not The Patient!
       </h1>
+      <div className="button-container">
+        <Button
+          className="btn-service"
+          variant="flat"
+          size="lg"
+          onClick={showModalHandler}
+        >
+          Order Exam
+        </Button>
+      </div>
       <img className="hero-image" src={hero} alt="" />
       {showModal && <TabComponent onClick={hideModalHandler} />}
-      <Button
-        className="btn-service"
-        variant="flat"
-        size="lg"
-        onClick={showModalHandler}
-      >
-        Order Exam
-      </Button>
       <h1 className="heading-secondary">
         Specialty Portable X-Ray, Inc. is here to help
       </h1>

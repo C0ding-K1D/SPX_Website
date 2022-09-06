@@ -6,6 +6,26 @@
     ;
 }
 
+.partner-container_two {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+    padding: 0 10rem 0 10rem;
+    ;
+}
+
+.partner-container_three {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+    padding: 0 7rem 0 7rem;
+    ;
+}
+
 .partner-heading {
     text-align: center;
     /* text-transform: uppercase; */

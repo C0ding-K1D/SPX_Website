@@ -47,31 +47,31 @@ const ServiceScreen = () => {
         SPX Provides in home digital X-Rays, Ultrasounds, Dopplers, Echo,
         Echocardiograms & EKG Exams.
       </h1>
+      <div className="btn-container">
+        <Button
+          variant="flat"
+          size="lg"
+          onClick={showModalHandler}
+          style={{
+            marginTop: "4rem",
+          }}
+        >
+          Order Exam
+        </Button>
+      </div>
       <img
         style={{
           position: "relative",
           left: "50%",
           transform: "translateX(-50%)",
           marginTop: "-5rem",
+          zIndex: "-199",
+          maxWidth: "100%",
         }}
         src={equipment}
         alt=""
       />
       {showModal && <TabComponent onClick={hideModalHandler} />}
-      <Button
-        variant="flat"
-        size="lg"
-        onClick={showModalHandler}
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translateX(-50%)",
-          zIndex: "200",
-        }}
-      >
-        Order Exam
-      </Button>
       <h1
         style={{
           marginTop: "-8rem",

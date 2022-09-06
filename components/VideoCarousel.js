@@ -1,6 +1,8 @@
 import "./VideoCarousel.css";
 import { Carousel } from "react-bootstrap";
 import ReactPlayer from "react-player";
+import tv from "../assets/tv.jpg";
+import interview from "../assets/interview.png";
 
 const VideoCarousel = () => {
   const videoProperties = [
@@ -92,6 +94,13 @@ const VideoCarousel = () => {
           );
         })}
       </Carousel>
+      <div className="media-container">
+        <img className="tv-icon" src={tv} alt="" />
+        <h1 className="media-heading">SPX Performed X-Ray's on ASAP Rocky</h1>
+        <p className="video-text">for</p>
+        <img className="interview-img" src={interview} alt="" />
+        <p className="video-text">Magazine</p>
+      </div>
     </>
   );
 };

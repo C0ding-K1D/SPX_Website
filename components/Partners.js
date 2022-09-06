@@ -4,7 +4,12 @@ import hippa from "../assets/hippa.png";
 import esaal from "../assets/esaal.png";
 import arrt from "../assets/arrt.png";
 import apdaLogo from "../assets/apdaLogo.png";
+import conEd from "../assets/conEd.png";
+import mta from "../assets/mta.png";
+import liberty from "../assets/liberty.png";
+import knicks from "../assets/knicks.png";
 import "./Partners.css";
+import southeby from "../assets/southeby.png";
 
 const Partners = () => {
   return (
@@ -34,6 +39,15 @@ const Partners = () => {
       <h1 className="partner-heading">
         Proudly Providing Professional X-Ray Services to
       </h1>
+      <div className="partner-container_two">
+        <img className="logos" src={conEd} alt="" />
+        <img className="logos" src={mta} alt="" />
+      </div>
+      <div className="partner-container_three">
+        <img className="logos" src={knicks} alt="" />
+        <img className="logos" src={liberty} alt="" />
+        <img className="logos" src={southeby} alt="" />
+      </div>
     </>
   );
 };
