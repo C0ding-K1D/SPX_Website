@@ -7,6 +7,10 @@
   font-family: 'Oswald';
 }
 
+html {
+  font-size: 100%;
+}
+
 body {
   font-family: 'Oswald', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -16,4 +20,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media screen and (max-width: 960px) {
+  html {
+    font-size: 77.5%;
+  }
 }

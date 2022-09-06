@@ -3,7 +3,7 @@
 }
 
 .logo {
-    width: 100%;
+    max-width: 100%;
     margin-top: -2rem;
     margin-bottom: -2rem;
     margin-right: -35rem;
@@ -23,8 +23,9 @@
     margin-right: 2rem;
 }
 
-@media screen and (max-width: 996px) {
-    .nav-btn {
-        display: none;
+@media screen and (max-width: 960px) {
+    .logo {
+        /* max-width: 50%; */
+        margin-right: -50rem;
     }
 }

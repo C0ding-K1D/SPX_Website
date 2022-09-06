@@ -1,7 +1,7 @@
 import { Label, Col, FormGroup } from "reactstrap";
 import { Button } from "react-bootstrap";
 import { Formik, Field, Form, ErrorMessage } from "formik";
-// import { validateContactForm } from '../utils/validateContactForm';
+import { validateIncallForm } from "../helpers/ValidateIncallForm";
 
 const IncallForm = () => {
   const handleSubmit = (values, { resetForm }) => {
@@ -9,6 +9,7 @@ const IncallForm = () => {
     console.log("in JSON format:", JSON.stringify(values));
     resetForm();
   };
+
   return (
     <>
       <style type="text/css">
@@ -28,8 +29,10 @@ const IncallForm = () => {
         initialValues={{
           firstName: "",
           lastName: "",
+          mdName: "",
           facility: "",
           roomNum: "",
+          phoneNum: "",
           contactType: "By Phone",
           insuranceProviderOne: "",
           insuranceProviderTwo: "",
@@ -39,9 +42,13 @@ const IncallForm = () => {
           comments: "",
           exam: "",
           symptoms: "",
+          yourName: "",
+          email: "",
+          examDate: "",
+          intakeDob: "",
         }}
         onSubmit={handleSubmit}
-        validate={() => {}}
+        validator={validateIncallForm}
       >
         <Form style={{ padding: "6rem", marginTop: "-3rem" }}>
           <h1>House Call Order Request</h1>
@@ -119,12 +126,12 @@ const IncallForm = () => {
             </Col>
           </FormGroup>
           <FormGroup row>
-            <Label htmlFor="dob" md="2">
+            <Label htmlFor="intakeDob" md="2">
               D.O.B
             </Label>
             <Col md="10">
-              <Field name="dob" type="date" className="form-control" />
-              <ErrorMessage name="dob">
+              <Field name="intakeDob" type="date" className="form-control" />
+              <ErrorMessage name="intakeDob">
                 {(msg) => <p className="text-danger">{msg}</p>}
               </ErrorMessage>
             </Col>
@@ -166,7 +173,7 @@ const IncallForm = () => {
             </Label>
             <Col md="10">
               <Field
-                name="PolicyOne"
+                name="policyOne"
                 placeholder="Policy Number"
                 className="form-control"
               />
@@ -193,7 +200,7 @@ const IncallForm = () => {
           <hr />
           <p>Exam Information</p>
           <FormGroup row>
-            <Label htmlFor="feedback" md="2">
+            <Label htmlFor="exam" md="2">
               Exam
             </Label>
             <Col md="10">
@@ -206,10 +213,13 @@ const IncallForm = () => {
                 }
                 className="form-control"
               />
+              <ErrorMessage name="exam">
+                {(msg) => <p className="text-danger">{msg}</p>}
+              </ErrorMessage>
             </Col>
           </FormGroup>
           <FormGroup row>
-            <Label htmlFor="feedback" md="2">
+            <Label htmlFor="symptoms" md="2">
               Symptoms
             </Label>
             <Col md="10">
@@ -222,12 +232,15 @@ const IncallForm = () => {
                 }
                 className="form-control"
               />
+              <ErrorMessage name="symptoms">
+                {(msg) => <p className="text-danger">{msg}</p>}
+              </ErrorMessage>
             </Col>
           </FormGroup>
           <hr />
           <p>Required Information</p>
           <FormGroup row>
-            <Label htmlFor="feedback" md="2">
+            <Label htmlFor="comments" md="2">
               Comments
             </Label>
             <Col md="10">
@@ -240,19 +253,22 @@ const IncallForm = () => {
                 }
                 className="form-control"
               />
+              <ErrorMessage name="comments">
+                {(msg) => <p className="text-danger">{msg}</p>}
+              </ErrorMessage>
             </Col>
           </FormGroup>
           <FormGroup row>
-            <Label htmlFor="md" md="2">
+            <Label htmlFor="mdName" md="2">
               MD
             </Label>
             <Col md="10">
               <Field
-                name="md"
+                name="mdName"
                 placeholder="Ordering Doctor's Name"
                 className="form-control"
               />
-              <ErrorMessage name="firstName">
+              <ErrorMessage name="mdName">
                 {(msg) => <p className="text-danger">{msg}</p>}
               </ErrorMessage>
             </Col>
@@ -278,7 +294,7 @@ const IncallForm = () => {
             </Label>
             <Col md="10">
               <Field
-                name="phoneNUM"
+                name="phoneNum"
                 placeholder="Contact Phone"
                 className="form-control"
               />

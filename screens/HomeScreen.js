@@ -6,6 +6,7 @@ import "./HomeScreen.css";
 import Announcements from "../components/Announcements";
 import Partners from "../components/Partners";
 import TabComponent from "../components/TabComponent";
+import Footer from "../components/Footer";
 
 const HomeScreen = () => {
   const [showModal, setShowModal] = useState(false);
@@ -61,6 +62,7 @@ const HomeScreen = () => {
       </p>
       <Announcements />
       <Partners />
+      <Footer onShowModal={showModalHandler} />
     </>
   );
 };

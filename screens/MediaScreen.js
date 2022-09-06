@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/Footer";
 import NavComponent from "../components/NavBar";
 import Partners from "../components/Partners";
 import VideoCarousel from "../components/VideoCarousel";
@@ -9,6 +10,7 @@ const MediaScreen = () => {
       <NavComponent />
       <VideoCarousel />
       <Partners />
+      <Footer />
     </>
   );
 };

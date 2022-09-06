@@ -1,6 +1,7 @@
 import React from "react";
 import NavComponent from "../components/NavBar";
 import { Tabs, Tab, TabList, TabPanel } from "react-tabs";
+import Footer from "../components/Footer";
 import "react-tabs/style/react-tabs.css";
 import "./CareerScreen.css";
 
@@ -36,7 +37,6 @@ const CareerScreen = () => {
         <TabList
           style={{
             backgroundColor: "#172a51f1",
-            // borderRadius: ".4rem",
             color: "#fff",
           }}
         >
@@ -63,6 +63,46 @@ const CareerScreen = () => {
             organization. As a pay by the case employer you can be confident
             that your hard-work, dedication extra efforts are rewarded.
           </p>
+          <h3 style={{ margin: "1rem 3rem" }}>Qualifications</h3>
+          <ul style={{ margin: "1rem 3rem" }}>
+            <li>Solid work ethic and reliability.</li>
+            <li>Moderate understanding of computer usage.</li>
+            <li>
+              Licensed by the State of New York or New Jersey and be registered
+              with ARRT.
+            </li>
+            <li>Clean driving record.</li>
+            <li>
+              Physically capable of lifting heavy equipment unassisted in and
+              out of a vehicle and up and down numerous stairs.
+            </li>
+          </ul>
+          <h3 style={{ margin: "1rem 3rem" }}>Be Advised</h3>
+          <p style={{ margin: "1rem 3rem" }}>
+            Since we travel to the patient's location there is a considerable
+            amount of driving involved in this position.
+          </p>
+          <h3 style={{ margin: "1rem 3rem" }}>Benefits</h3>
+          <ul style={{ margin: "1rem 3rem" }}>
+            <li>Salary range: $65,000 - $90,000+</li>
+            <li>Medical</li>
+            <li>401K</li>
+            <li>Paid Training</li>
+            <li>
+              Being on the road, visiting multiple locations vs. being in the
+              same place all day, every day.
+            </li>
+          </ul>
+          <h2 className="career-subheading">Submit your application</h2>
+          <p style={{ textAlign: "center" }}>
+            Email your resume, cover letter and New York State or New Jersey
+            State License to{" "}
+            <a href="mailto:Careers@SpecialtyXray.com">
+              Careers@SpecialtyXray.com
+            </a>
+          </p>
+          <p style={{ textAlign: "center" }}>or</p>
+          <h1 className="career-footer">Submit your application on Indeed</h1>
         </TabPanel>
         <TabPanel
           style={{
@@ -83,8 +123,44 @@ const CareerScreen = () => {
             organization. As a pay by the case employer you can be confident
             that your hard-work, dedication extra efforts are rewarded.
           </p>
+          <h3 style={{ margin: "1rem 3rem" }}>Qualifications</h3>
+          <ul style={{ margin: "1rem 3rem" }}>
+            <li>Solid work ethic and reliability.</li>
+            <li>Moderate understanding of computer usage.</li>
+            <li>
+              Must be registered in Vascular, General and/or Echocardiogram.
+            </li>
+            <li>Clean driving record.</li>
+          </ul>
+          <h3 style={{ margin: "1rem 3rem" }}>Be Advised</h3>
+          <p style={{ margin: "1rem 3rem" }}>
+            Since we travel to the patient's location there is a considerable
+            amount of driving involved in this position.
+          </p>
+          <h3 style={{ margin: "1rem 3rem" }}>Benefits</h3>
+          <ul style={{ margin: "1rem 3rem" }}>
+            <li>Salary range: $65,000 - $90,000+</li>
+            <li>Medical</li>
+            <li>401K</li>
+            <li>Paid Training</li>
+            <li>
+              Being on the road, visiting multiple locations vs. being in the
+              same place all day, every day.
+            </li>
+          </ul>
+          <h2 className="career-subheading">Submit your application</h2>
+          <p style={{ textAlign: "center" }}>
+            Email your resume, cover letter and New York State or New Jersey
+            State License to{" "}
+            <a href="mailto:Careers@SpecialtyXray.com">
+              Careers@SpecialtyXray.com
+            </a>
+          </p>
+          <p style={{ textAlign: "center" }}>or</p>
+          <h1 className="career-footer">Submit your application on Indeed</h1>
         </TabPanel>
       </Tabs>
+      <Footer />
     </>
   );
 };

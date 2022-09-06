@@ -1,7 +1,7 @@
 import { Label, Col, FormGroup } from "reactstrap";
 import { Button } from "react-bootstrap";
 import { Formik, Field, Form, ErrorMessage } from "formik";
-// import { validateContactForm } from '../utils/validateContactForm';
+import { validateContactForm } from "../helpers/ValidateContactForm";
 
 const ContactForm = () => {
   const handleSubmit = (values, { resetForm }) => {
@@ -35,7 +35,7 @@ const ContactForm = () => {
           feedback: "",
         }}
         onSubmit={handleSubmit}
-        validate={() => {}}
+        validate={validateContactForm}
       >
         <Form style={{ padding: "6rem", marginTop: "-3rem" }}>
           <FormGroup row>
@@ -74,7 +74,7 @@ const ContactForm = () => {
             </Label>
             <Col md="10">
               <Field
-                name="phoneNUM"
+                name="phoneNum"
                 placeholder="Phone"
                 className="form-control"
               />

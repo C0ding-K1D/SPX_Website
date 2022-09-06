@@ -10,6 +10,7 @@ import {
 import "react-accessible-accordion/dist/fancy-example.css";
 import "./FaqScreen.css";
 import Partners from "../components/Partners";
+import Footer from "../components/Footer";
 
 const FaqScreen = () => {
   return (
@@ -239,6 +240,7 @@ const FaqScreen = () => {
         and have them call 888-XRAY-NOW.
       </p>
       <Partners />
+      <Footer />
     </>
   );
 };

@@ -5,6 +5,7 @@ import equipment from "../assets/XrayMachine.jpg";
 import "./ServiceScreen.css";
 import Partners from "../components/Partners";
 import TabComponent from "../components/TabComponent";
+import Footer from "../components/Footer";
 
 const ServiceScreen = () => {
   const [showModal, setShowModal] = useState(false);
@@ -116,6 +117,7 @@ const ServiceScreen = () => {
         <li>Clinics</li>
       </ul>
       <Partners />
+      <Footer />
     </>
   );
 };

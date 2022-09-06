@@ -1,7 +1,7 @@
 import { Label, Col, FormGroup } from "reactstrap";
 import { Button } from "react-bootstrap";
 import { Formik, Field, Form, ErrorMessage } from "formik";
-// import { validateContactForm } from '../utils/validateContactForm';
+import { validateOutcallForm } from "../helpers/ValidateOutcallForm";
 
 const OutcallForm = () => {
   const handleSubmit = (values, { resetForm }) => {
@@ -28,11 +28,10 @@ const OutcallForm = () => {
         initialValues={{
           firstName: "",
           lastName: "",
+          mdName: "",
           facility: "",
           roomNum: "",
           phoneNum: "",
-          dob: "",
-          examDate: "",
           contactType: "By Phone",
           insuranceProviderOne: "",
           insuranceProviderTwo: "",
@@ -42,9 +41,13 @@ const OutcallForm = () => {
           comments: "",
           exam: "",
           symptoms: "",
+          yourName: "",
+          email: "",
+          examDate: "",
+          outTakeDob: "",
         }}
         onSubmit={handleSubmit}
-        validate={() => {}}
+        validator={validateOutcallForm}
       >
         <Form style={{ padding: "6rem", marginTop: "-3rem" }}>
           <h1>Facility Order Request</h1>
@@ -122,17 +125,17 @@ const OutcallForm = () => {
             </Col>
           </FormGroup>
           <FormGroup row>
-            <Label htmlFor="dob" md="2">
+            <Label htmlFor="outTakeDob" md="2">
               D.O.B
             </Label>
             <Col md="10">
               <Field
-                name="dob"
-                placeholder="dob"
+                name="outTakeDob"
+                placeholder="outTakeDob"
                 type="date"
                 className="form-control"
               />
-              <ErrorMessage name="dob">
+              <ErrorMessage name="outTakeDob">
                 {(msg) => <p className="text-danger">{msg}</p>}
               </ErrorMessage>
             </Col>
@@ -174,7 +177,7 @@ const OutcallForm = () => {
             </Label>
             <Col md="10">
               <Field
-                name="PolicyOne"
+                name="policyOne"
                 placeholder="Policy Number"
                 className="form-control"
               />
@@ -201,7 +204,7 @@ const OutcallForm = () => {
           <hr />
           <p>Exam Information</p>
           <FormGroup row>
-            <Label htmlFor="feedback" md="2">
+            <Label htmlFor="exam" md="2">
               Exam
             </Label>
             <Col md="10">
@@ -214,10 +217,13 @@ const OutcallForm = () => {
                 }
                 className="form-control"
               />
+              <ErrorMessage name="exam">
+                {(msg) => <p className="text-danger">{msg}</p>}
+              </ErrorMessage>
             </Col>
           </FormGroup>
           <FormGroup row>
-            <Label htmlFor="feedback" md="2">
+            <Label htmlFor="symptoms" md="2">
               Symptoms
             </Label>
             <Col md="10">
@@ -231,11 +237,14 @@ const OutcallForm = () => {
                 className="form-control"
               />
             </Col>
+            <ErrorMessage name="symptoms">
+              {(msg) => <p className="text-danger">{msg}</p>}
+            </ErrorMessage>
           </FormGroup>
           <hr />
           <p>Required Information</p>
           <FormGroup row>
-            <Label htmlFor="feedback" md="2">
+            <Label htmlFor="comments" md="2">
               Comments
             </Label>
             <Col md="10">
@@ -248,19 +257,22 @@ const OutcallForm = () => {
                 }
                 className="form-control"
               />
+              <ErrorMessage name="comments">
+                {(msg) => <p className="text-danger">{msg}</p>}
+              </ErrorMessage>
             </Col>
           </FormGroup>
           <FormGroup row>
-            <Label htmlFor="md" md="2">
+            <Label htmlFor="mdName" md="2">
               MD
             </Label>
             <Col md="10">
               <Field
-                name="md"
+                name="mdName"
                 placeholder="Ordering Doctor's Name"
                 className="form-control"
               />
-              <ErrorMessage name="firstName">
+              <ErrorMessage name="mdName">
                 {(msg) => <p className="text-danger">{msg}</p>}
               </ErrorMessage>
             </Col>
@@ -286,7 +298,7 @@ const OutcallForm = () => {
             </Label>
             <Col md="10">
               <Field
-                name="phoneNUM"
+                name="phoneNum"
                 placeholder="Contact Phone"
                 className="form-control"
               />

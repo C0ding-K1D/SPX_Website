@@ -40,13 +40,13 @@ const Partners = () => {
         Proudly Providing Professional X-Ray Services to
       </h1>
       <div className="partner-container_two">
-        <img className="logos" src={conEd} alt="" />
-        <img className="logos" src={mta} alt="" />
+        <img className="logos-three" src={conEd} alt="" />
+        <img className="logos-three" src={mta} alt="" />
       </div>
       <div className="partner-container_three">
-        <img className="logos" src={knicks} alt="" />
-        <img className="logos" src={liberty} alt="" />
-        <img className="logos" src={southeby} alt="" />
+        <img className="logos-two" src={liberty} alt="" />
+        <img className="logos-two" src={southeby} alt="" />
+        <img className="logos-two" src={knicks} alt="" />
       </div>
     </>
   );

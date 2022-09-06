@@ -3,6 +3,7 @@ import NavComponent from "../components/NavBar";
 import "./HistoryScreen.css";
 import crossImg from "../assets/nurses.png";
 import Partners from "../components/Partners";
+import Footer from "../components/Footer";
 
 const HistoryScreen = () => {
   return (
@@ -79,6 +80,7 @@ const HistoryScreen = () => {
         RADIOGRAPHIC TECHNOLOGY
       </h1>
       <Partners />
+      <Footer />
     </>
   );
 };

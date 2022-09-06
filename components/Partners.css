@@ -52,3 +52,47 @@
 .logos {
     width: 15%;
 }
+
+.logos-two {
+    width: 20%;
+}
+
+.logos-three {
+    width: 30%;
+}
+
+@media screen and (max-width:960px) {
+    .partner-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .partner-container_two {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: -3rem;
+        ;
+    }
+
+    .partner-container_three {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logos {
+        width: 35%;
+    }
+
+    .logos-two {
+        height: 35%;
+        width: 35%;
+    }
+
+    .logos-three {
+        height: 35%;
+        width: 55%;
+    }
+}
